@@ -7,6 +7,7 @@ modId="limitmyinventory"
 version = "${version}"
 displayName="Limit my inventory!"
 displayURL="https://dreaming.codes"
+logoFile="logo.png"
 authors="DreamingCodes"
 description='This mod allows you to limit your inventory max stack size.'
 
