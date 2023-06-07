@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="MIT"
+
+[[mods]]
+modId="limitmyinventory"
+version = "${version}"
+displayName="Limit my inventory!"
+displayURL="https://dreaming.codes"
+authors="DreamingCodes"
+description='This mod allows you to limit your inventory max stack size.'
+
+[[dependencies.limitmyinventory]]
+   modId = "forge"
+   mandatory = true
+   versionRange = "[${forge_version},)"
+   ordering = "NONE"
+   side = "BOTH"
+
+[[dependencies.limitmyinventory]]
+   modId = "minecraft"
+   mandatory = true
+   versionRange = "[${mc_version}]"
+   ordering = "NONE"
+   side = "BOTH"

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "codes.dreaming.limitmyinventory.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "limitmyinventory.refmap.json",
+  "mixins": [
+    "SlotsMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
