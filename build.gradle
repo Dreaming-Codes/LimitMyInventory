@@ -73,6 +73,9 @@ minecraft {
     // These can be tweaked, removed, or duplicated as needed.
     runs {
         client {
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
+
             workingDirectory project.file('run')
 
             // Recommended logging data for a userdev environment
@@ -169,6 +172,21 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven {
+        // Shedaniel's maven (Architectury API)
+        url = "https://maven.architectury.dev"
+        content {
+            includeGroup "dev.architectury"
+        }
+    }
+
+    maven {
+        // saps.dev Maven (KubeJS and Rhino)
+        url = "https://maven.saps.dev/minecraft"
+        content {
+            includeGroup "dev.latvian.mods"
+        }
+    }
 }
 
 dependencies {
@@ -190,6 +208,13 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    // ForgeGradle
+    implementation fg.deobf("dev.latvian.mods:kubejs-forge:${version_kubejs}")
+
+    // these two are unfortunately needed since fg.deobf doesn't respect transitive dependencies yet
+    implementation fg.deobf("dev.latvian.mods:rhino-forge:${version_rhino}")
+    implementation fg.deobf("dev.architectury:architectury-forge:${version_architectury}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
