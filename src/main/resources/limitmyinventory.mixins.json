@@ -5,7 +5,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "limitmyinventory.refmap.json",
   "mixins": [
-    "SlotsMixin"
+    "SlotMixin"
   ],
   "client": [
   ],

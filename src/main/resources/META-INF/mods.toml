@@ -24,3 +24,10 @@ description='This mod allows you to limit your inventory max stack size.'
    versionRange = "[${mc_version}]"
    ordering = "NONE"
    side = "BOTH"
+
+[[dependencies.limitmyinventory]]
+   modId = "kubejs"
+   mandatory = true
+   versionRange = "[${kubejs_version},)"
+   ordering = "NONE"
+   side = "BOTH"
