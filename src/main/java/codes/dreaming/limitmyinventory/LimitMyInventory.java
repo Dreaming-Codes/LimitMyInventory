@@ -4,7 +4,6 @@ import codes.dreaming.limitmyinventory.kubejs.KubeJSLimitMyInventoryPlugin;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.HashMap;
@@ -20,7 +19,6 @@ public class LimitMyInventory {
     }
 
     public void serverReload(TagsUpdatedEvent event) {
-        System.out.println("Server reload event fired");
         maxInventoryStackSizes.clear();
         KubeJSLimitMyInventoryPlugin.SET_INVENTORY_MAX_STACK_SIZE.post(KubeJSLimitMyInventoryPlugin.SetInventoryMaxStackSizeEventJS.INSTANCE);
     }

@@ -12,7 +12,6 @@ public class KubeJSLimitMyInventoryPlugin extends KubeJSPlugin {
 
     @Override
     public void registerEvents() {
-        System.out.println("Registering LimitMyInventory events");
         GROUP.register();
     }
 
